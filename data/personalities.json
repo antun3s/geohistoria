@@ -1,0 +1,212 @@
+[
+    {
+        "id": "leonardo-da-vinci",
+        "name": "Leonardo da Vinci",
+        "aliases": ["Leonardo"],
+        "birth": {
+            "year": 1452,
+            "city": "Vinci",
+            "country": "Itália",
+            "latitude": 43.7833,
+            "longitude": 10.9333
+        },
+        "death": {
+            "year": 1519,
+            "city": "Amboise",
+            "country": "França",
+            "latitude": 47.4133,
+            "longitude": 0.9844
+        },
+        "curiosity": "Pintou a Mona Lisa e desenhou máquinas à frente de seu tempo.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Leonardo_da_Vinci"
+    },
+    {
+        "id": "cleopatra",
+        "name": "Cleópatra VII",
+        "aliases": ["Cleópatra"],
+        "birth": {
+            "year": -69,
+            "city": "Alexandria",
+            "country": "Egito",
+            "latitude": 31.2001,
+            "longitude": 29.9187
+        },
+        "death": {
+            "year": -30,
+            "city": "Alexandria",
+            "country": "Egito",
+            "latitude": 31.2001,
+            "longitude": 29.9187
+        },
+        "curiosity": "Foi a última governante do Reino Ptolemaico do Egito.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Cle%C3%B3patra_VII"
+    },
+    {
+        "id": "napoleao-bonaparte",
+        "name": "Napoleão Bonaparte",
+        "aliases": ["Napoleão"],
+        "birth": {
+            "year": 1769,
+            "city": "Ajaccio",
+            "country": "França",
+            "latitude": 41.9192,
+            "longitude": 8.7386
+        },
+        "death": {
+            "year": 1821,
+            "city": "Santa Helena",
+            "country": "Reino Unido",
+            "latitude": -15.965,
+            "longitude": -5.7089
+        },
+        "curiosity": "Expandiu o Império Francês por grande parte da Europa antes de ser exilado.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Napole%C3%A3o_Bonaparte"
+    },
+    {
+        "id": "isaac-newton",
+        "name": "Isaac Newton",
+        "aliases": ["Newton"],
+        "birth": {
+            "year": 1643,
+            "city": "Woolsthorpe",
+            "country": "Inglaterra",
+            "latitude": 52.8096,
+            "longitude": -0.6279
+        },
+        "death": {
+            "year": 1727,
+            "city": "Londres",
+            "country": "Inglaterra",
+            "latitude": 51.5074,
+            "longitude": -0.1278
+        },
+        "curiosity": "Formulou as leis do movimento e da gravitação universal.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Isaac_Newton"
+    },
+    {
+        "id": "marie-curie",
+        "name": "Marie Curie",
+        "aliases": ["Marie Curie", "Maria Curie"],
+        "birth": {
+            "year": 1867,
+            "city": "Varsóvia",
+            "country": "Polônia",
+            "latitude": 52.2297,
+            "longitude": 21.0122
+        },
+        "death": {
+            "year": 1934,
+            "city": "Passy",
+            "country": "França",
+            "latitude": 45.9237,
+            "longitude": 6.8694
+        },
+        "curiosity": "Foi a primeira mulher a ganhar um Prêmio Nobel e conquistou dois.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Marie_Curie"
+    },
+    {
+        "id": "cristovao-colombo",
+        "name": "Cristóvão Colombo",
+        "aliases": ["Colombo"],
+        "birth": {
+            "year": 1451,
+            "city": "Gênova",
+            "country": "Itália",
+            "latitude": 44.4056,
+            "longitude": 8.9463
+        },
+        "death": {
+            "year": 1506,
+            "city": "Valladolid",
+            "country": "Espanha",
+            "latitude": 41.6523,
+            "longitude": -4.7245
+        },
+        "curiosity": "Liderou viagens que ligaram a Europa às Américas.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Crist%C3%B3v%C3%A3o_Colombo"
+    },
+    {
+        "id": "ludwig-van-beethoven",
+        "name": "Ludwig van Beethoven",
+        "aliases": ["Beethoven"],
+        "birth": {
+            "year": 1770,
+            "city": "Bonn",
+            "country": "Alemanha",
+            "latitude": 50.7374,
+            "longitude": 7.0982
+        },
+        "death": {
+            "year": 1827,
+            "city": "Viena",
+            "country": "Áustria",
+            "latitude": 48.2082,
+            "longitude": 16.3738
+        },
+        "curiosity": "Compôs a Nona Sinfonia já completamente surdo.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Ludwig_van_Beethoven"
+    },
+    {
+        "id": "galileu-galilei",
+        "name": "Galileu Galilei",
+        "aliases": ["Galileu"],
+        "birth": {
+            "year": 1564,
+            "city": "Pisa",
+            "country": "Itália",
+            "latitude": 43.7228,
+            "longitude": 10.4017
+        },
+        "death": {
+            "year": 1642,
+            "city": "Arcetri",
+            "country": "Itália",
+            "latitude": 43.75,
+            "longitude": 11.25
+        },
+        "curiosity": "Melhorou o telescópio e defendeu o modelo heliocêntrico.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Galileu_Galilei"
+    },
+    {
+        "id": "joana-darc",
+        "name": "Joana d'Arc",
+        "aliases": ["Joana dArc", "Joana"],
+        "birth": {
+            "year": 1412,
+            "city": "Domrémy",
+            "country": "França",
+            "latitude": 48.4439,
+            "longitude": 5.6783
+        },
+        "death": {
+            "year": 1431,
+            "city": "Rouen",
+            "country": "França",
+            "latitude": 49.4439,
+            "longitude": 1.0993
+        },
+        "curiosity": "Liderou exércitos franceses durante a Guerra dos Cem Anos.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Joana_d%27Arc"
+    },
+    {
+        "id": "charles-darwin",
+        "name": "Charles Darwin",
+        "aliases": ["Darwin"],
+        "birth": {
+            "year": 1809,
+            "city": "Shrewsbury",
+            "country": "Inglaterra",
+            "latitude": 52.7073,
+            "longitude": -2.7553
+        },
+        "death": {
+            "year": 1882,
+            "city": "Downe",
+            "country": "Inglaterra",
+            "latitude": 51.3345,
+            "longitude": 0.0613
+        },
+        "curiosity": "Desenvolveu a teoria da evolução das espécies por seleção natural.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Charles_Darwin"
+    }
+]
