@@ -45,8 +45,9 @@ const GameMap = (function () {
             attributionControl: true
         });
 
-        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-            attribution: "&copy; OpenStreetMap contributors",
+        L.tileLayer("https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png", {
+            attribution: "&copy; OpenStreetMap contributors, &copy; CARTO",
+            subdomains: "abcd",
             maxZoom: 18
         }).addTo(map);
 
