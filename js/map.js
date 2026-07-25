@@ -54,7 +54,7 @@ const GameMap = (function () {
 
         markersLayer = L.layerGroup().addTo(map);
 
-        map.setView([20, 0], 2);
+        map.setView([20, 0], 1);
         map.invalidateSize();
     }
 

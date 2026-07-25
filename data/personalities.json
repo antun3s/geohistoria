@@ -208,5 +208,320 @@
         },
         "curiosity": "Desenvolveu a teoria da evolução das espécies por seleção natural.",
         "wikipediaUrl": "https://pt.wikipedia.org/wiki/Charles_Darwin"
+    },
+    {
+        "id": "adolf-hitler",
+        "name": "Adolf Hitler",
+        "aliases": ["Hitler"],
+        "birth": {
+            "year": 1889,
+            "city": "Braunau am Inn",
+            "country": "Áustria",
+            "latitude": 48.2583,
+            "longitude": 13.0333
+        },
+        "death": {
+            "year": 1945,
+            "city": "Berlim",
+            "country": "Alemanha",
+            "latitude": 52.5200,
+            "longitude": 13.4050
+        },
+        "curiosity": "Liderou a Alemanha nazista durante a Segunda Guerra Mundial.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Adolf_Hitler"
+    },
+    {
+        "id": "josef-mengele",
+        "name": "Josef Mengele",
+        "aliases": ["Mengele"],
+        "birth": {
+            "year": 1911,
+            "city": "Günzburg",
+            "country": "Alemanha",
+            "latitude": 48.4522,
+            "longitude": 10.2711
+        },
+        "death": {
+            "year": 1979,
+            "city": "Bertioga",
+            "country": "Brasil",
+            "latitude": -23.8486,
+            "longitude": -46.1386
+        },
+        "curiosity": "Fugiu para a América do Sul após a Segunda Guerra Mundial e viveu no Brasil.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Josef_Mengele"
+    },
+    {
+        "id": "dom-pedro-i",
+        "name": "Dom Pedro I",
+        "aliases": ["Pedro I", "Pedro de Alcântara"],
+        "birth": {
+            "year": 1798,
+            "city": "Lisboa",
+            "country": "Portugal",
+            "latitude": 38.7223,
+            "longitude": -9.1393
+        },
+        "death": {
+            "year": 1834,
+            "city": "Queluz",
+            "country": "Portugal",
+            "latitude": 38.7566,
+            "longitude": -9.2545
+        },
+        "curiosity": "Proclamou a independência do Brasil e tornou-se seu primeiro imperador.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Pedro_I_do_Brasil"
+    },
+    {
+        "id": "gengis-khan",
+        "name": "Gengis Khan",
+        "aliases": ["Genghis Khan", "Temujin"],
+        "birth": {
+            "year": 1162,
+            "city": "Stepes da Mongólia",
+            "country": "Mongólia",
+            "latitude": 48.5000,
+            "longitude": 109.0000
+        },
+        "death": {
+            "year": 1227,
+            "city": "Yinchuan",
+            "country": "China",
+            "latitude": 38.4872,
+            "longitude": 106.2309
+        },
+        "curiosity": "Fundou o maior império contíguo da história, unindo tribos nômades da Ásia.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Gengis_Khan"
+    },
+    {
+        "id": "fernao-de-magalhaes",
+        "name": "Fernão de Magalhães",
+        "aliases": ["Magalhães", "Ferdinand Magellan"],
+        "birth": {
+            "year": 1480,
+            "city": "Sabrosa",
+            "country": "Portugal",
+            "latitude": 41.3333,
+            "longitude": -7.5667
+        },
+        "death": {
+            "year": 1521,
+            "city": "Mactan",
+            "country": "Filipinas",
+            "latitude": 10.2926,
+            "longitude": 124.0125
+        },
+        "curiosity": "Liderou a primeira expedição a dar a volta ao mundo, mas morreu antes de completá-la.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Fern%C3%A3o_de_Magalh%C3%A3es"
+    },
+    {
+        "id": "dom-pedro-ii",
+        "name": "Dom Pedro II",
+        "aliases": ["Pedro II"],
+        "birth": {
+            "year": 1825,
+            "city": "Rio de Janeiro",
+            "country": "Brasil",
+            "latitude": -22.9068,
+            "longitude": -43.1729
+        },
+        "death": {
+            "year": 1891,
+            "city": "Paris",
+            "country": "França",
+            "latitude": 48.8566,
+            "longitude": 2.3522
+        },
+        "curiosity": "Último imperador do Brasil, viveu exilado na Europa após a proclamação da república.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Pedro_II_do_Brasil"
+    },
+    {
+        "id": "dom-joao-vi",
+        "name": "Dom João VI",
+        "aliases": ["João VI"],
+        "birth": {
+            "year": 1767,
+            "city": "Lisboa",
+            "country": "Portugal",
+            "latitude": 38.7223,
+            "longitude": -9.1393
+        },
+        "death": {
+            "year": 1826,
+            "city": "Rio de Janeiro",
+            "country": "Brasil",
+            "latitude": -22.9068,
+            "longitude": -43.1729
+        },
+        "curiosity": "Transferiu a corte portuguesa para o Brasil durante as Guerras Napoleônicas.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Jo%C3%A3o_VI_de_Portugal"
+    },
+    {
+        "id": "maria-antonieta",
+        "name": "Maria Antonieta",
+        "aliases": ["Marie Antoinette"],
+        "birth": {
+            "year": 1755,
+            "city": "Viena",
+            "country": "Áustria",
+            "latitude": 48.2082,
+            "longitude": 16.3738
+        },
+        "death": {
+            "year": 1793,
+            "city": "Paris",
+            "country": "França",
+            "latitude": 48.8566,
+            "longitude": 2.3522
+        },
+        "curiosity": "Rainha da França, foi guilhotinada durante a Revolução Francesa.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Maria_Antonieta"
+    },
+    {
+        "id": "karl-marx",
+        "name": "Karl Marx",
+        "aliases": ["Marx"],
+        "birth": {
+            "year": 1818,
+            "city": "Tréveris",
+            "country": "Alemanha",
+            "latitude": 49.7596,
+            "longitude": 6.6425
+        },
+        "death": {
+            "year": 1883,
+            "city": "Londres",
+            "country": "Inglaterra",
+            "latitude": 51.5074,
+            "longitude": -0.1278
+        },
+        "curiosity": "Escreveu 'O Capital' e desenvolveu a teoria do comunismo científico.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Karl_Marx"
+    },
+    {
+        "id": "sigmund-freud",
+        "name": "Sigmund Freud",
+        "aliases": ["Freud"],
+        "birth": {
+            "year": 1856,
+            "city": "Příbor",
+            "country": "República Tcheca",
+            "latitude": 49.6333,
+            "longitude": 17.8167
+        },
+        "death": {
+            "year": 1939,
+            "city": "Londres",
+            "country": "Inglaterra",
+            "latitude": 51.5074,
+            "longitude": -0.1278
+        },
+        "curiosity": "Fundador da psicanálise, refugiou-se em Londres fugindo do nazismo.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Sigmund_Freud"
+    },
+    {
+        "id": "albert-einstein",
+        "name": "Albert Einstein",
+        "aliases": ["Einstein"],
+        "birth": {
+            "year": 1879,
+            "city": "Ulm",
+            "country": "Alemanha",
+            "latitude": 48.4011,
+            "longitude": 9.9876
+        },
+        "death": {
+            "year": 1955,
+            "city": "Princeton",
+            "country": "Estados Unidos",
+            "latitude": 40.3573,
+            "longitude": -74.6672
+        },
+        "curiosity": "Desenvolveu a teoria da relatividade e mudou a compreensão do espaço e tempo.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Albert_Einstein"
+    },
+    {
+        "id": "charlie-chaplin",
+        "name": "Charlie Chaplin",
+        "aliases": ["Chaplin", "Charles Chaplin"],
+        "birth": {
+            "year": 1889,
+            "city": "Londres",
+            "country": "Inglaterra",
+            "latitude": 51.5074,
+            "longitude": -0.1278
+        },
+        "death": {
+            "year": 1977,
+            "city": "Vevey",
+            "country": "Suíça",
+            "latitude": 46.4628,
+            "longitude": 6.8419
+        },
+        "curiosity": "Um dos maiores ícones do cinema mudo, famoso pelo personagem Carlitos.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Charlie_Chaplin"
+    },
+    {
+        "id": "oscar-wilde",
+        "name": "Oscar Wilde",
+        "aliases": ["Wilde"],
+        "birth": {
+            "year": 1854,
+            "city": "Dublin",
+            "country": "Irlanda",
+            "latitude": 53.3498,
+            "longitude": -6.2603
+        },
+        "death": {
+            "year": 1900,
+            "city": "Paris",
+            "country": "França",
+            "latitude": 48.8566,
+            "longitude": 2.3522
+        },
+        "curiosity": "Escritor e dramaturgo irlandês, autor de 'O Retrato de Dorian Gray'.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Oscar_Wilde"
+    },
+    {
+        "id": "vincent-van-gogh",
+        "name": "Vincent van Gogh",
+        "aliases": ["Van Gogh"],
+        "birth": {
+            "year": 1853,
+            "city": "Zundert",
+            "country": "Holanda",
+            "latitude": 51.4716,
+            "longitude": 4.6583
+        },
+        "death": {
+            "year": 1890,
+            "city": "Auvers-sur-Oise",
+            "country": "França",
+            "latitude": 49.0720,
+            "longitude": 2.1706
+        },
+        "curiosity": "Pintou obras como 'A Noite Estrelada' e vendeu apenas um quadro em vida.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Vincent_van_Gogh"
+    },
+    {
+        "id": "che-guevara",
+        "name": "Che Guevara",
+        "aliases": ["Che", "Ernesto Guevara"],
+        "birth": {
+            "year": 1928,
+            "city": "Rosario",
+            "country": "Argentina",
+            "latitude": -32.9442,
+            "longitude": -60.6505
+        },
+        "death": {
+            "year": 1967,
+            "city": "La Higuera",
+            "country": "Bolívia",
+            "latitude": -18.7867,
+            "longitude": -64.1619
+        },
+        "curiosity": "Médico, guerrilheiro e figura central da Revolução Cubana.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Che_Guevara"
     }
 ]
