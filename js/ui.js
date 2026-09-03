@@ -30,6 +30,7 @@ const UI = (function () {
     let onAnswerSubmit = null;
     let onSkip = null;
     let onStart = null;
+    let feedbackTimeout = null;
 
     function showScreen(name) {
         Object.values(screens).forEach((screen) => screen.classList.remove("screen--active"));
@@ -65,12 +66,17 @@ const UI = (function () {
     }
 
     function showFeedback(message, type) {
+        if (feedbackTimeout) {
+            clearTimeout(feedbackTimeout);
+        }
+
         elements.feedback.textContent = message;
         elements.feedback.className = `feedback feedback--${type}`;
 
-        setTimeout(() => {
+        feedbackTimeout = setTimeout(() => {
             elements.feedback.textContent = "";
             elements.feedback.className = "feedback";
+            feedbackTimeout = null;
         }, 2000);
     }
 

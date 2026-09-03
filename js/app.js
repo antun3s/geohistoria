@@ -30,11 +30,19 @@
 
         if (result.result === "correct") {
             UI.showFeedback("Correto!", "success");
-        } else if (result.result === "wrong") {
+        } else if (result.result === "wrong" || result.result === "game-over") {
             UI.showFeedback(`Errado. Era ${result.personality.name}.`, "error");
         }
 
         if (state.gameOver) {
+            if (result.result === "game-over") {
+                setTimeout(() => {
+                    UI.renderEndScreen(state);
+                    UI.showScreen("end");
+                }, 1200);
+                return;
+            }
+
             UI.renderEndScreen(state);
             UI.showScreen("end");
             return;

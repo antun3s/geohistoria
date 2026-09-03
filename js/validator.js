@@ -1,5 +1,6 @@
 const Validator = (function () {
     const MAX_EDIT_DISTANCE = 2;
+    const SHORT_NAME_LENGTH = 6;
 
     function normalize(text) {
         if (!text) {
@@ -10,7 +11,7 @@ const Validator = (function () {
             .toLowerCase()
             .normalize("NFD")
             .replace(/[\u0300-\u036f]/g, "")
-            .replace(/[^a-z0-9\s]/g, "")
+            .replace(/[^a-z0-9]+/g, " ")
             .replace(/\s+/g, " ")
             .trim();
     }
@@ -40,6 +41,10 @@ const Validator = (function () {
         return matrix[b.length][a.length];
     }
 
+    function maxEditDistance(target) {
+        return target.length <= SHORT_NAME_LENGTH ? 1 : MAX_EDIT_DISTANCE;
+    }
+
     function isCloseEnough(answer, target) {
         const normalizedAnswer = normalize(answer);
         const normalizedTarget = normalize(target);
@@ -53,7 +58,7 @@ const Validator = (function () {
         }
 
         const distance = levenshteinDistance(normalizedAnswer, normalizedTarget);
-        return distance <= MAX_EDIT_DISTANCE;
+        return distance <= maxEditDistance(normalizedTarget);
     }
 
     function isCorrect(answer, personality) {
