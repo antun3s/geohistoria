@@ -523,5 +523,383 @@
         },
         "curiosity": "Médico, guerrilheiro e figura central da Revolução Cubana.",
         "wikipediaUrl": "https://pt.wikipedia.org/wiki/Che_Guevara"
+    },
+    {
+        "id": "ayrton-senna",
+        "name": "Ayrton Senna",
+        "aliases": ["Senna"],
+        "birth": {
+            "year": 1960,
+            "city": "São Paulo",
+            "country": "Brasil",
+            "latitude": -23.5505,
+            "longitude": -46.6333
+        },
+        "death": {
+            "year": 1994,
+            "city": "Imola",
+            "country": "Itália",
+            "latitude": 44.3559,
+            "longitude": 11.7122
+        },
+        "curiosity": "Tricampeão mundial de Fórmula 1, venceu o GP de Brasil de 1991 com o câmbio quebrado.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Ayrton_Senna"
+    },
+    {
+        "id": "carmen-miranda",
+        "name": "Carmen Miranda",
+        "aliases": ["Carmen"],
+        "birth": {
+            "year": 1909,
+            "city": "Marco de Canaveses",
+            "country": "Portugal",
+            "latitude": 41.1846,
+            "longitude": -8.1369
+        },
+        "death": {
+            "year": 1955,
+            "city": "Beverly Hills",
+            "country": "Estados Unidos",
+            "latitude": 34.0736,
+            "longitude": -118.4004
+        },
+        "curiosity": "A Pequena Notável: portuguesa de nascimento, brasileira de coração, foi a primeira estrela latino-americana de Hollywood.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Carmen_Miranda"
+    },
+    {
+        "id": "jose-de-anchieta",
+        "name": "Padre Anchieta",
+        "aliases": ["José de Anchieta", "Anchieta"],
+        "birth": {
+            "year": 1534,
+            "city": "San Cristóbal de La Laguna",
+            "country": "Espanha",
+            "latitude": 28.4866,
+            "longitude": -16.3160
+        },
+        "death": {
+            "year": 1597,
+            "city": "Anchieta",
+            "country": "Brasil",
+            "latitude": -20.8008,
+            "longitude": -40.6408
+        },
+        "curiosity": "O Apóstolo do Brasil: co-fundador de São Paulo e autor da primeira gramática da língua tupi.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/José_de_Anchieta"
+    },
+    {
+        "id": "padre-antonio-vieira",
+        "name": "Padre Antônio Vieira",
+        "aliases": ["Antônio Vieira", "Vieira"],
+        "birth": {
+            "year": 1608,
+            "city": "Lisboa",
+            "country": "Portugal",
+            "latitude": 38.7223,
+            "longitude": -9.1393
+        },
+        "death": {
+            "year": 1697,
+            "city": "Salvador",
+            "country": "Brasil",
+            "latitude": -12.9777,
+            "longitude": -38.5016
+        },
+        "curiosity": "Considerado o maior escritor de prosa barroca em língua portuguesa, defendeu indígenas e cristãos-novos nas cortes europeias.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Padre_Antônio_Vieira"
+    },
+    {
+        "id": "anita-garibaldi",
+        "name": "Anita Garibaldi",
+        "aliases": ["Ana Garibaldi"],
+        "birth": {
+            "year": 1821,
+            "city": "Laguna",
+            "country": "Brasil",
+            "latitude": -28.4757,
+            "longitude": -48.7803
+        },
+        "death": {
+            "year": 1849,
+            "city": "Comacchio",
+            "country": "Itália",
+            "latitude": 44.7528,
+            "longitude": 12.1989
+        },
+        "curiosity": "Heroína dos dois mundos: lutou na Revolução Farroupilha e na unificação da Itália ao lado de Giuseppe Garibaldi.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Anita_Garibaldi"
+    },
+    {
+        "id": "clarice-lispector",
+        "name": "Clarice Lispector",
+        "aliases": [],
+        "birth": {
+            "year": 1920,
+            "city": "Chechelnyk",
+            "country": "Ucrânia",
+            "latitude": 48.8333,
+            "longitude": 29.4667
+        },
+        "death": {
+            "year": 1977,
+            "city": "Rio de Janeiro",
+            "country": "Brasil",
+            "latitude": -22.9068,
+            "longitude": -43.1729
+        },
+        "curiosity": "Nasceu na Ucrânia, cresceu em Recife e tornou-se uma das maiores escritoras brasileiras, autora de 'A Hora da Estrela'.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Clarice_Lispector"
+    },
+    {
+        "id": "alexandre-o-grande",
+        "name": "Alexandre, o Grande",
+        "aliases": ["Alexandre Magno", "Alexandre"],
+        "birth": {
+            "year": -356,
+            "city": "Pella",
+            "country": "Grécia",
+            "latitude": 40.7620,
+            "longitude": 22.5205
+        },
+        "death": {
+            "year": -323,
+            "city": "Babilônia",
+            "country": "Iraque",
+            "latitude": 32.5420,
+            "longitude": 44.4210
+        },
+        "curiosity": "Nunca perdeu uma batalha e fundou mais de vinte cidades com seu nome, incluindo Alexandria, no Egito.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Alexandre,_o_Grande"
+    },
+    {
+        "id": "anibal",
+        "name": "Aníbal",
+        "aliases": ["Hannibal"],
+        "birth": {
+            "year": -247,
+            "city": "Cartago",
+            "country": "Tunísia",
+            "latitude": 36.8525,
+            "longitude": 10.3235
+        },
+        "death": {
+            "year": -183,
+            "city": "Gebze",
+            "country": "Turquia",
+            "latitude": 40.8027,
+            "longitude": 29.4314
+        },
+        "curiosity": "Atravessou os Alpes com dezenas de elefantes de guerra e manteve Roma sob cerco por mais de uma década.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Aníbal"
+    },
+    {
+        "id": "saladino",
+        "name": "Saladino",
+        "aliases": ["Salah ad-Din"],
+        "birth": {
+            "year": 1137,
+            "city": "Tikrit",
+            "country": "Iraque",
+            "latitude": 34.6107,
+            "longitude": 43.6794
+        },
+        "death": {
+            "year": 1193,
+            "city": "Damasco",
+            "country": "Síria",
+            "latitude": 33.5138,
+            "longitude": 36.2765
+        },
+        "curiosity": "Retomou Jerusalém em 1187 e ficou conhecido por tratar seus inimigos com cavalaria, até mesmo reis capturados.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Saladino"
+    },
+    {
+        "id": "ricardo-coracao-de-leao",
+        "name": "Ricardo Coração de Leão",
+        "aliases": ["Ricardo I", "Richard the Lionheart"],
+        "birth": {
+            "year": 1157,
+            "city": "Oxford",
+            "country": "Inglaterra",
+            "latitude": 51.7522,
+            "longitude": -1.2577
+        },
+        "death": {
+            "year": 1199,
+            "city": "Châlus",
+            "country": "França",
+            "latitude": 45.7826,
+            "longitude": 0.8310
+        },
+        "curiosity": "Passou apenas seis meses de seus dez anos de reinado na Inglaterra e morreu no continente, atingido por uma flecha durante um cerco.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Ricardo_I_de_Inglaterra"
+    },
+    {
+        "id": "rene-descartes",
+        "name": "René Descartes",
+        "aliases": ["Descartes"],
+        "birth": {
+            "year": 1596,
+            "city": "Descartes",
+            "country": "França",
+            "latitude": 46.9706,
+            "longitude": 0.7436
+        },
+        "death": {
+            "year": 1650,
+            "city": "Estocolmo",
+            "country": "Suécia",
+            "latitude": 59.3293,
+            "longitude": 18.0686
+        },
+        "curiosity": "Autor de 'penso, logo existo', morreu na Suécia após dar aulas de filosofia à rainha Cristina às cinco da manhã, em pleno inverno.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/René_Descartes"
+    },
+    {
+        "id": "simon-bolivar",
+        "name": "Simón Bolívar",
+        "aliases": ["Bolívar", "El Libertador"],
+        "birth": {
+            "year": 1783,
+            "city": "Caracas",
+            "country": "Venezuela",
+            "latitude": 10.4806,
+            "longitude": -66.9036
+        },
+        "death": {
+            "year": 1830,
+            "city": "Santa Marta",
+            "country": "Colômbia",
+            "latitude": 11.2408,
+            "longitude": -74.2118
+        },
+        "curiosity": "O Libertador: liderou a independência de Venezuela, Colômbia, Equador, Peru, Bolívia e Panamá.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Simón_Bolívar"
+    },
+    {
+        "id": "nikola-tesla",
+        "name": "Nikola Tesla",
+        "aliases": ["Tesla"],
+        "birth": {
+            "year": 1856,
+            "city": "Smiljan",
+            "country": "Croácia",
+            "latitude": 44.5568,
+            "longitude": 15.2570
+        },
+        "death": {
+            "year": 1943,
+            "city": "Nova York",
+            "country": "Estados Unidos",
+            "latitude": 40.7128,
+            "longitude": -74.0060
+        },
+        "curiosity": "Venceu a 'guerra das correntes' contra Thomas Edison: o sistema de corrente alternada que ele defendeu é o que usamos até hoje.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Nikola_Tesla"
+    },
+    {
+        "id": "frederic-chopin",
+        "name": "Frédéric Chopin",
+        "aliases": ["Chopin"],
+        "birth": {
+            "year": 1810,
+            "city": "Żelazowa Wola",
+            "country": "Polônia",
+            "latitude": 52.2461,
+            "longitude": 20.3489
+        },
+        "death": {
+            "year": 1849,
+            "city": "Paris",
+            "country": "França",
+            "latitude": 48.8566,
+            "longitude": 2.3522
+        },
+        "curiosity": "Seu coração foi preservado em álcool e enterrado em Varsóvia, enquanto o resto do corpo ficou em Paris.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Frédéric_Chopin"
+    },
+    {
+        "id": "madre-teresa",
+        "name": "Madre Teresa",
+        "aliases": ["Teresa de Calcutá"],
+        "birth": {
+            "year": 1910,
+            "city": "Skopje",
+            "country": "Macedônia do Norte",
+            "latitude": 41.9976,
+            "longitude": 21.4284
+        },
+        "death": {
+            "year": 1997,
+            "city": "Calcutá",
+            "country": "Índia",
+            "latitude": 22.5726,
+            "longitude": 88.3639
+        },
+        "curiosity": "Nobel da Paz em 1979, dedicou a vida aos mais pobres de Calcutá e se tornou símbolo da caridade cristã.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Madre_Teresa_de_Calcutá"
+    },
+    {
+        "id": "james-joyce",
+        "name": "James Joyce",
+        "aliases": ["Joyce"],
+        "birth": {
+            "year": 1882,
+            "city": "Dublin",
+            "country": "Irlanda",
+            "latitude": 53.3498,
+            "longitude": -6.2603
+        },
+        "death": {
+            "year": 1941,
+            "city": "Zurique",
+            "country": "Suíça",
+            "latitude": 47.3769,
+            "longitude": 8.5417
+        },
+        "curiosity": "Autor de 'Ulisses', romance que retrata um único dia em Dublin e é considerado um dos mais importantes da língua inglesa.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/James_Joyce"
+    },
+    {
+        "id": "vasco-da-gama",
+        "name": "Vasco da Gama",
+        "aliases": ["Vasco"],
+        "birth": {
+            "year": 1469,
+            "city": "Sines",
+            "country": "Portugal",
+            "latitude": 37.9554,
+            "longitude": -8.8736
+        },
+        "death": {
+            "year": 1524,
+            "city": "Kochi",
+            "country": "Índia",
+            "latitude": 9.9312,
+            "longitude": 76.2673
+        },
+        "curiosity": "Primeiro europeu a chegar à Índia por mar, contornando o Cabo da Boa Esperança em 1498; morreu de malária na Índia como vice-rei.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Vasco_da_Gama"
+    },
+    {
+        "id": "enrico-fermi",
+        "name": "Enrico Fermi",
+        "aliases": ["Fermi"],
+        "birth": {
+            "year": 1901,
+            "city": "Roma",
+            "country": "Itália",
+            "latitude": 41.9028,
+            "longitude": 12.4964
+        },
+        "death": {
+            "year": 1954,
+            "city": "Chicago",
+            "country": "Estados Unidos",
+            "latitude": 41.8781,
+            "longitude": -87.6298
+        },
+        "curiosity": "Construiu o primeiro reator nuclear da história debaixo das arquibancadas de um estádio de futebol em Chicago.",
+        "wikipediaUrl": "https://pt.wikipedia.org/wiki/Enrico_Fermi"
     }
 ]
