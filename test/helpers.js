@@ -1,16 +1,4 @@
-const fs = require("node:fs");
-const path = require("node:path");
-
-const ROOT = path.join(__dirname, "..");
-
-function loadScript(relativePath, exportName) {
-    const source = fs.readFileSync(path.join(ROOT, relativePath), "utf8");
-    const declaration = source.match(/^const\s+([A-Za-z_$][\w$]*)\s*=/m);
-    const name = exportName === null ? null : exportName || (declaration && declaration[1]);
-    return name ? eval(`${source}\n;${name}`) : eval(source);
-}
-
-function createFakeElement(id) {
+export function createFakeElement(id) {
     const classes = new Set();
     const listeners = {};
     const children = [];
@@ -24,6 +12,7 @@ function createFakeElement(id) {
         disabled: false,
         style: {},
         children,
+        focusCount: 0,
         classList: {
             add(name) { classes.add(name); },
             remove(name) { classes.delete(name); },
@@ -32,11 +21,13 @@ function createFakeElement(id) {
         addEventListener(type, handler) { listeners[type] = handler; },
         listeners,
         appendChild(child) { children.push(child); },
-        focus() {}
+        append(...nodes) { children.push(...nodes); },
+        replaceChildren() { children.length = 0; },
+        focus() { this.focusCount++; }
     };
 }
 
-function installFakeDocument() {
+export function installFakeDocument() {
     const elements = new Map();
 
     globalThis.document = {
@@ -52,10 +43,14 @@ function installFakeDocument() {
         body: createFakeElement("body")
     };
 
+    globalThis.getComputedStyle = () => ({
+        getPropertyValue: () => ""
+    });
+
     return globalThis.document;
 }
 
-function installLeafletStub() {
+export function installLeafletStub() {
     const fakeMap = {
         setView() {},
         invalidateSize() {},
@@ -79,13 +74,27 @@ function installLeafletStub() {
     return fakeMap;
 }
 
-function sleep(milliseconds) {
-    return new Promise((resolve) => setTimeout(resolve, milliseconds));
+export function installFakeStorage() {
+    const store = new Map();
+
+    globalThis.localStorage = {
+        getItem(key) {
+            return store.has(key) ? store.get(key) : null;
+        },
+        setItem(key, value) {
+            store.set(key, String(value));
+        },
+        removeItem(key) {
+            store.delete(key);
+        },
+        clear() {
+            store.clear();
+        }
+    };
+
+    return store;
 }
 
-module.exports = {
-    loadScript,
-    installFakeDocument,
-    installLeafletStub,
-    sleep
-};
+export function sleep(milliseconds) {
+    return new Promise((resolve) => setTimeout(resolve, milliseconds));
+}
