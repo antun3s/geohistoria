@@ -50,12 +50,22 @@ let skipsRemaining = 3;
 let surrenderArmed = false;
 let disarmTimeout = null;
 
+function shouldAutoFocusInput() {
+    if (typeof window === "undefined" || typeof window.matchMedia !== "function") {
+        return true;
+    }
+
+    return window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+}
+
 function showScreen(name) {
     Object.values(screens).forEach((screen) => screen.classList.remove("screen--active"));
     screens[name].classList.add("screen--active");
 
     if (name === "game") {
-        elements.answerInput.focus();
+        if (shouldAutoFocusInput()) {
+            elements.answerInput.focus();
+        }
         setTimeout(() => GameMap.resize(), 50);
     }
 }
