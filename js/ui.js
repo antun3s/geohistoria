@@ -1,5 +1,16 @@
 import * as GameMap from "./map.js";
 
+const RESOURCE_GAUGE_TOTAL = 3;
+const SURRENDER_ARM_TIMEOUT = 3000;
+const SKIP_LABEL = "Pular";
+const SURRENDER_LABEL = "Não sei";
+const SURRENDER_CONFIRM_LABEL = "Confirmar desistência?";
+const END_TITLES = {
+    "collection-exhausted": "Vitória!",
+    "no-lives": "Fim de Jogo",
+    "surrender": "Fim de Jogo"
+};
+
 const elements = {
     startButton: document.getElementById("start-button"),
     restartButton: document.getElementById("restart-button"),
@@ -18,6 +29,7 @@ const elements = {
     endCorrect: document.getElementById("end-correct"),
     endWrong: document.getElementById("end-wrong"),
     endSkips: document.getElementById("end-skips"),
+    endSurrender: document.getElementById("end-surrender"),
     endBest: document.getElementById("end-best"),
     wrongAnswersSection: document.getElementById("wrong-answers-section"),
     wrongAnswersList: document.getElementById("wrong-answers-list")
@@ -31,8 +43,12 @@ const screens = {
 
 let onAnswerSubmit = null;
 let onSkip = null;
+let onSurrender = null;
 let onStart = null;
 let feedbackTimeout = null;
+let skipsRemaining = 3;
+let surrenderArmed = false;
+let disarmTimeout = null;
 
 function showScreen(name) {
     Object.values(screens).forEach((screen) => screen.classList.remove("screen--active"));
@@ -44,11 +60,64 @@ function showScreen(name) {
     }
 }
 
+function renderGauge(container, label, remaining) {
+    const filled = Math.max(0, Math.min(RESOURCE_GAUGE_TOTAL, remaining));
+    const cells = [];
+
+    for (let index = 0; index < RESOURCE_GAUGE_TOTAL; index++) {
+        const cell = document.createElement("span");
+        cell.classList.add("gauge__cell");
+        if (index < filled) {
+            cell.classList.add("gauge__cell--filled");
+        }
+        cells.push(cell);
+    }
+
+    container.replaceChildren();
+    container.append(...cells);
+    container.setAttribute("aria-label", `${label}: ${Math.max(0, remaining)}`);
+}
+
+function armSurrender() {
+    surrenderArmed = true;
+    elements.skipButton.textContent = SURRENDER_CONFIRM_LABEL;
+    elements.skipButton.classList.add("button--armed");
+    disarmTimeout = setTimeout(disarmSurrender, SURRENDER_ARM_TIMEOUT);
+}
+
+function disarmSurrender() {
+    surrenderArmed = false;
+
+    if (disarmTimeout) {
+        clearTimeout(disarmTimeout);
+        disarmTimeout = null;
+    }
+
+    elements.skipButton.classList.remove("button--armed");
+
+    if (skipsRemaining <= 0) {
+        elements.skipButton.textContent = SURRENDER_LABEL;
+    }
+}
+
 function setHud(state) {
-    elements.livesDisplay.textContent = state.lives;
-    elements.skipsDisplay.textContent = state.skips;
+    skipsRemaining = state.skips;
+    renderGauge(elements.livesDisplay, "Vidas", state.lives);
+    renderGauge(elements.skipsDisplay, "Pulos", state.skips);
     elements.scoreDisplay.textContent = state.correctCount;
-    elements.skipButton.disabled = state.skips <= 0;
+
+    if (state.skips > 0) {
+        disarmSurrender();
+        elements.skipButton.classList.remove("button--danger");
+        elements.skipButton.classList.add("button--secondary");
+        elements.skipButton.textContent = SKIP_LABEL;
+    } else {
+        elements.skipButton.classList.remove("button--secondary");
+        elements.skipButton.classList.add("button--danger");
+        if (!surrenderArmed) {
+            elements.skipButton.textContent = SURRENDER_LABEL;
+        }
+    }
 }
 
 function formatPlace(city, country) {
@@ -115,11 +184,11 @@ function createReviewItem(personality) {
 }
 
 function renderEndScreen(state, bestScore) {
-    const victory = state.lives > 0;
-    elements.endTitle.textContent = victory ? "Vitória!" : "Fim de Jogo";
+    elements.endTitle.textContent = END_TITLES[state.endReason] ?? "Partida Encerrada";
     elements.endCorrect.textContent = state.correctCount;
     elements.endWrong.textContent = state.wrongCount;
     elements.endSkips.textContent = state.skipsUsed;
+    elements.endSurrender.textContent = state.surrenderCount;
     elements.endBest.textContent = bestScore;
 
     elements.wrongAnswersList.replaceChildren();
@@ -149,6 +218,8 @@ function bindEvents() {
 
     elements.answerForm.addEventListener("submit", (event) => {
         event.preventDefault();
+        disarmSurrender();
+
         const answer = elements.answerInput.value.trim();
         if (!answer) {
             return;
@@ -163,8 +234,22 @@ function bindEvents() {
     });
 
     elements.skipButton.addEventListener("click", () => {
-        if (onSkip) {
-            onSkip();
+        if (skipsRemaining > 0) {
+            if (onSkip) {
+                onSkip();
+            }
+            return;
+        }
+
+        if (!surrenderArmed) {
+            armSurrender();
+            return;
+        }
+
+        disarmSurrender();
+
+        if (onSurrender) {
+            onSurrender();
         }
     });
 }
@@ -172,6 +257,7 @@ function bindEvents() {
 export function init(handlers) {
     onAnswerSubmit = handlers.onAnswerSubmit;
     onSkip = handlers.onSkip;
+    onSurrender = handlers.onSurrender;
     onStart = handlers.onStart;
     bindEvents();
 }

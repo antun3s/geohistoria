@@ -19,6 +19,7 @@
             <div class="card card--centered">
                 <h2>Descubra a personalidade histórica</h2>
                 <p>Use as pistas de tempo e lugar para identificar quem é.</p>
+                <p class="rules">3 vidas · 3 pulos · digite a resposta livremente</p>
                 <button id="start-button" class="button button--primary">Iniciar Partida</button>
             </div>
         </section>
@@ -27,11 +28,11 @@
             <div class="hud">
                 <div class="hud__item">
                     <span class="hud__label">Vidas</span>
-                    <span id="lives-display" class="hud__value">3</span>
+                    <div id="lives-display" class="hud__value gauge gauge--lives" role="img" aria-label="Vidas: 3"></div>
                 </div>
                 <div class="hud__item">
                     <span class="hud__label">Pulos</span>
-                    <span id="skips-display" class="hud__value">3</span>
+                    <div id="skips-display" class="hud__value gauge gauge--skips" role="img" aria-label="Pulos: 3"></div>
                 </div>
                 <div class="hud__item">
                     <span class="hud__label">Acertos</span>
@@ -84,13 +85,17 @@
                         <span id="end-skips" class="summary__value">0</span>
                     </div>
                     <div class="summary__item">
+                        <span class="summary__label">Não sei</span>
+                        <span id="end-surrender" class="summary__value">0</span>
+                    </div>
+                    <div class="summary__item">
                         <span class="summary__label">Recorde</span>
                         <span id="end-best" class="summary__value">0</span>
                     </div>
                 </div>
 
                 <div id="wrong-answers-section" class="learning">
-                    <h3>Revise as personalidades que você errou ou pulou</h3>
+                    <h3>Revise as personalidades que você errou, pulou ou desistiu</h3>
                     <ul id="wrong-answers-list" class="learning__list"></ul>
                 </div>
 

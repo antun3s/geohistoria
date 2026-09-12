@@ -83,6 +83,16 @@ function handleSkip() {
     UI.displayPersonality(state.currentPersonality);
 }
 
+function handleSurrender() {
+    const result = Game.surrender();
+    if (!result) {
+        return;
+    }
+
+    UI.showFeedback(`Era ${result.personality.name}.`, "error");
+    revealAnswerBeforeEndScreen(Game.getState());
+}
+
 async function init() {
     try {
         const personalities = await loadPersonalities();
@@ -91,7 +101,8 @@ async function init() {
         UI.init({
             onStart: startGame,
             onAnswerSubmit: handleAnswerSubmit,
-            onSkip: handleSkip
+            onSkip: handleSkip,
+            onSurrender: handleSurrender
         });
 
         UI.showScreen("start");

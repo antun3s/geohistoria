@@ -81,6 +81,7 @@ test("três erros encerram o jogo e revelam quem era a última personalidade", (
 
     const state = Game.getState();
     assert.equal(state.gameOver, true);
+    assert.equal(state.endReason, "no-lives");
     assert.equal(state.lives, 0);
     assert.equal(state.wrongCount, 3);
     assert.equal(state.wrongPersonalities.length, 3);
@@ -151,7 +152,73 @@ test("vitória esgota a coleção sem perder vidas", () => {
 
     const state = Game.getState();
     assert.equal(state.gameOver, true);
+    assert.equal(state.endReason, "collection-exhausted");
     assert.equal(state.lives, 3);
     assert.equal(state.correctCount, 2);
     assert.equal(state.reviewPersonalities.length, 0);
+});
+
+test("desistência é ignorada quando restam pulos", () => {
+    Game.loadCollection(createCollection(5));
+    Game.start();
+
+    assert.equal(Game.surrender(), null);
+
+    const state = Game.getState();
+    assert.equal(state.gameOver, false);
+    assert.equal(state.surrenderCount, 0);
+});
+
+test("desistência encerra a partida sem custo de vida", () => {
+    Game.loadCollection(createCollection(5));
+    Game.start();
+
+    Game.skip();
+    Game.skip();
+    Game.skip();
+
+    const current = Game.getState().currentPersonality;
+    const result = Game.surrender();
+
+    assert.equal(result.result, "surrendered");
+    assert.equal(result.personality.id, current.id);
+
+    const state = Game.getState();
+    assert.equal(state.gameOver, true);
+    assert.equal(state.endReason, "surrender");
+    assert.equal(state.lives, 3);
+    assert.equal(state.wrongCount, 0);
+    assert.equal(state.skips, 0);
+    assert.equal(state.skipsUsed, 3);
+    assert.equal(state.surrenderCount, 1);
+});
+
+test("desistência é ignorada após o fim do jogo", () => {
+    Game.loadCollection(createCollection(5));
+    Game.start();
+
+    Game.skip();
+    Game.skip();
+    Game.skip();
+    Game.surrender();
+
+    assert.equal(Game.surrender(), null);
+    assert.equal(Game.getState().surrenderCount, 1);
+});
+
+test("desistência entra na revisão sem virar erro nem pulo", () => {
+    Game.loadCollection(createCollection(5));
+    Game.start();
+
+    Game.skip();
+    Game.skip();
+    Game.skip();
+    const surrendered = Game.surrender().personality;
+
+    const state = Game.getState();
+    assert.equal(state.surrenderedPersonalities.length, 1);
+    assert.equal(state.surrenderedPersonalities[0].id, surrendered.id);
+    assert.equal(state.wrongPersonalities.length, 0);
+    assert.equal(state.reviewPersonalities.length, 4);
+    assert.equal(state.reviewPersonalities[3].id, surrendered.id);
 });

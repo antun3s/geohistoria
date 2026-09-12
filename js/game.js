@@ -13,6 +13,9 @@ let correctCount = 0;
 let wrongCount = 0;
 let wrongPersonalities = [];
 let skippedPersonalities = [];
+let surrenderCount = 0;
+let surrenderedPersonalities = [];
+let endReason = null;
 let gameOver = false;
 
 function shuffle(array) {
@@ -39,6 +42,9 @@ export function start() {
     wrongCount = 0;
     wrongPersonalities = [];
     skippedPersonalities = [];
+    surrenderCount = 0;
+    surrenderedPersonalities = [];
+    endReason = null;
     gameOver = false;
     collection = shuffle(collection);
     cursor = 0;
@@ -78,6 +84,7 @@ export function submitAnswer(answer) {
     wrongPersonalities.push(answeredPersonality);
 
     if (lives <= 0) {
+        endReason = "no-lives";
         gameOver = true;
         return { result: "game-over", personality: answeredPersonality };
     }
@@ -99,7 +106,21 @@ export function skip() {
     return { result: "skipped", personality: skippedPersonality };
 }
 
+export function surrender() {
+    if (gameOver || skips > 0 || !currentPersonality) {
+        return null;
+    }
+
+    const surrenderedPersonality = currentPersonality;
+    surrenderCount++;
+    surrenderedPersonalities.push(surrenderedPersonality);
+    endReason = "surrender";
+    gameOver = true;
+    return { result: "surrendered", personality: surrenderedPersonality };
+}
+
 function endGame() {
+    endReason = "collection-exhausted";
     gameOver = true;
 }
 
@@ -110,8 +131,15 @@ export function getState() {
         skipsUsed,
         correctCount,
         wrongCount,
+        surrenderCount,
         wrongPersonalities: [...wrongPersonalities],
-        reviewPersonalities: [...wrongPersonalities, ...skippedPersonalities],
+        surrenderedPersonalities: [...surrenderedPersonalities],
+        endReason,
+        reviewPersonalities: [
+            ...wrongPersonalities,
+            ...skippedPersonalities,
+            ...surrenderedPersonalities
+        ],
         gameOver,
         currentPersonality
     };

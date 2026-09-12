@@ -8,6 +8,7 @@
     --color-secondary: #8c8c8c;
     --color-secondary-dark: #6e6e6e;
     --color-danger: #c44536;
+    --color-danger-dark: #a63728;
     --color-success: #2a9d8f;
     --color-border: #e0e0e0;
     --radius: 0.75rem;
@@ -124,10 +125,22 @@ body {
     background-color: var(--color-secondary-dark);
 }
 
-.button--secondary:disabled {
-    background-color: var(--color-border);
-    color: var(--color-text-muted);
-    cursor: not-allowed;
+.button--danger {
+    background-color: var(--color-danger);
+    color: #ffffff;
+}
+
+.button--danger:hover {
+    background-color: var(--color-danger-dark);
+}
+
+.button--armed {
+    outline: 3px solid var(--color-danger);
+    outline-offset: 2px;
+}
+
+.rules {
+    font-size: 0.875rem;
 }
 
 .hud {
@@ -156,6 +169,28 @@ body {
 .hud__value {
     font-size: 1.5rem;
     font-weight: 700;
+}
+
+.gauge {
+    display: flex;
+    gap: 0.375rem;
+    align-items: center;
+    min-height: 1.75rem;
+}
+
+.gauge__cell {
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 50%;
+    background-color: var(--color-border);
+}
+
+.gauge--lives .gauge__cell--filled {
+    background-color: var(--color-danger);
+}
+
+.gauge--skips .gauge__cell--filled {
+    background-color: var(--color-primary);
 }
 
 .map {

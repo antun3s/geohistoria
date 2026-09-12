@@ -91,6 +91,40 @@ test("pulo revela quem era a personalidade pulada", async () => {
     skipCurrent();
 
     assert.equal(document.getElementById("feedback").textContent, `Pulado! Era ${skippedName}.`);
-    assert.equal(String(document.getElementById("skips-display").textContent), "2");
+    assert.equal(document.getElementById("skips-display").getAttribute("aria-label"), "Pulos: 2");
     assert.equal(Game.getState().reviewPersonalities.length, 1);
 });
+
+test("desistência com dois toques encerra sem vitória e revela quem era", async () => {
+    document.getElementById("restart-button").listeners.click();
+
+    skipCurrent();
+    skipCurrent();
+    skipCurrent();
+
+    const surrenderedName = Game.getState().currentPersonality.name;
+    const button = document.getElementById("skip-button");
+
+    assert.equal(button.textContent, "Não sei");
+
+    button.listeners.click();
+
+    assert.equal(button.textContent, "Confirmar desistência?");
+    assert.equal(screenIsActive("game-screen"), true, "toque único não deveria encerrar a partida");
+    assert.equal(Game.getState().gameOver, false);
+
+    button.listeners.click();
+
+    assert.equal(document.getElementById("feedback").textContent, `Era ${surrenderedName}.`);
+    assert.equal(screenIsActive("game-screen"), true, "tela final não deveria aparecer imediatamente");
+
+    await sleep(1400);
+
+    assert.equal(screenIsActive("end-screen"), true, "tela final deveria aparecer após o atraso");
+    assert.equal(document.getElementById("end-title").textContent, "Fim de Jogo", "desistência com vidas sobrando não pode ser vitória");
+    assert.equal(String(document.getElementById("end-surrender").textContent), "1");
+    assert.equal(String(document.getElementById("end-wrong").textContent), "0");
+    assert.equal(String(document.getElementById("end-skips").textContent), "3");
+    assert.equal(String(document.getElementById("end-best").textContent), "1", "recorde anterior (1) deveria ser mantido");
+    assert.equal(Game.getState().lives, 3, "desistência não deveria consumir vida");
+}, 10000);

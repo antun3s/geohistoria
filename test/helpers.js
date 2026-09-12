@@ -2,6 +2,7 @@ export function createFakeElement(id) {
     const classes = new Set();
     const listeners = {};
     const children = [];
+    const attributes = {};
 
     return {
         id,
@@ -23,6 +24,8 @@ export function createFakeElement(id) {
         appendChild(child) { children.push(child); },
         append(...nodes) { children.push(...nodes); },
         replaceChildren() { children.length = 0; },
+        setAttribute(name, value) { attributes[name] = String(value); },
+        getAttribute(name) { return name in attributes ? attributes[name] : null; },
         focus() { this.focusCount++; }
     };
 }

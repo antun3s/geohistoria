@@ -249,7 +249,24 @@ Ao utilizar um pulo:
 
 Após o pulo, uma nova personalidade deve ser selecionada.
 
-Quando todos os pulos forem utilizados, essa opção deixa de estar disponível.
+Quando todos os pulos forem utilizados, o botão de pulo deixa de oferecer o pulo e passa a oferecer a ação de desistência ("Não sei"), descrita na seção 8.1.
+
+## 8.1 Ação "Não sei" (desistência)
+
+Quando os pulos estiverem esgotados, o participante poderá acionar a desistência por meio do botão "Não sei".
+
+A desistência:
+
+- exige confirmação em dois toques no próprio botão: o primeiro toque arma a confirmação e o segundo a executa;
+- é desarmada automaticamente após alguns segundos ou quando o participante submete uma resposta;
+- encerra a partida imediatamente, independentemente das vidas restantes;
+- não consome vida;
+- não é contabilizada como acerto nem como erro;
+- entra no resumo final em categoria própria ("Não sei");
+- inclui a personalidade em jogo na lista de revisão pós-partida;
+- revela quem era a personalidade antes da tela final.
+
+A ação de desistência é distinta do pulo e não invalida o invariante de que um pulo nunca consome uma vida.
 
 ---
 
@@ -283,9 +300,10 @@ Ao término da partida, a aplicação deve apresentar um resumo contendo:
 
 - quantidade de acertos;
 - quantidade de erros;
-- quantidade de pulos utilizados.
+- quantidade de pulos utilizados;
+- quantidade de desistências ("Não sei").
 
-Além disso, deve ser apresentada uma lista contendo todas as personalidades respondidas incorretamente.
+Além disso, deve ser apresentada uma lista contendo todas as personalidades respondidas incorretamente, puladas ou desistidas.
 
 Cada item da lista deve possuir um link para seu respectivo artigo na Wikipédia em português.
 
@@ -305,6 +323,10 @@ Todas as personalidades previstas para a partida foram respondidas corretamente 
 
 O participante perde todas as vidas disponíveis.
 
+## Desistência
+
+O participante aciona a ação "Não sei" com os pulos esgotados, conforme a seção 8.1. O encerramento por desistência não é vitória nem derrota: a partida termina, a personalidade em jogo é revelada e o resumo é apresentado.
+
 ---
 
 # 12. Interface
@@ -318,6 +340,8 @@ Ela deve destacar prioritariamente:
 - campo de resposta.
 
 Informações secundárias devem possuir menor destaque visual.
+
+As vidas e os pulos devem ser exibidos no HUD como indicadores visuais preenchidos e vazios, acompanhados de rótulo acessível com a contagem numérica. A tela inicial deve apresentar, de forma concisa, as regras da partida (quantidade de vidas, quantidade de pulos e digitação livre como forma de resposta).
 
 A primeira versão deve possuir interface exclusivamente em português brasileiro.
 
@@ -458,6 +482,8 @@ As seguintes regras devem permanecer verdadeiras durante toda a execução da ap
 
 - Um pulo nunca consome uma vida.
 
+- A desistência nunca consome uma vida.
+
 - Uma resposta correta nunca consome uma vida.
 
 - Uma resposta incorreta sempre consome exatamente uma vida.
@@ -597,7 +623,8 @@ Ao final da partida é apresentado:
 - quantidade de acertos;
 - quantidade de erros;
 - quantidade de pulos;
-- lista das personalidades respondidas incorretamente;
+- quantidade de desistências;
+- lista das personalidades respondidas incorretamente, puladas ou desistidas;
 - links para os respectivos artigos na Wikipédia em português.
 
 ---
