@@ -52,7 +52,7 @@ Cada item segue este formato:
 }
 ```
 
-Anos antes de Cristo devem ser negativos (ex.: `-69`).
+Anos antes da Era Comum (AEC) devem ser negativos (ex.: `-69`).
 
 ## Testes
 

@@ -44,8 +44,21 @@ body {
 }
 
 .header {
+    position: relative;
     text-align: center;
     padding: var(--spacing-md) 0;
+}
+
+.header__repo {
+    position: absolute;
+    top: var(--spacing-md);
+    right: 0;
+    display: inline-flex;
+    color: var(--color-text-muted);
+}
+
+.header__repo:hover {
+    color: var(--color-text);
 }
 
 .logo {
